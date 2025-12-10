@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #050810;
+  color: #fff;
+}
+
+.checkbox-custom {
+  appearance: none;
+  width: 16px; height: 16px;
+  border: 1.5px solid #334155;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+.checkbox-custom:checked { background: #3b82f6; border-color: #3b82f6; }
+.checkbox-custom:checked::after {
+  content: '';
+  position: absolute;
+  left: 4px; top: 1px;
+  width: 4px; height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #1e3a5f; border-radius: 2px; }
+
+::selection { background: rgba(59, 130, 246, 0.3); }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #050810 inset !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+canvas {
+  display: block;
+}
